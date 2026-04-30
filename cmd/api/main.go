@@ -23,7 +23,12 @@ func main() {
 		json.NewEncoder(w).Encode(map[string]string{"status": "ok"})
 	})
 
-	addr := ":8080"
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	addr := ":" + port
+
 	logger.Info("server starting", "addr", addr)
 	if err := http.ListenAndServe(addr, r); err != nil {
 		logger.Error("server failed", "err", err)
