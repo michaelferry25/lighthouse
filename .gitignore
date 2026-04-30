@@ -1,0 +1,31 @@
+# Environment
+.env
+.env.local
+.envrc
+
+# Go
+*.exe
+*.test
+*.out
+*.prof
+/bin/
+/dist/
+vendor/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.log
+npm-debug.log*
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local databases / data
+*.db
+*.sqlite
+/tmp/
